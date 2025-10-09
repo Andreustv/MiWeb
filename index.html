@@ -1,18 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Mi Web</title>
+   
+  <meta charset="UTF-8" />
+  <title>Bienvenido</title>
+  <script>
+    // Redirigir solo si estamos en el index principal
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.location.pathname === '/' || window.location.pathname.endsWith('/index.html')) {
+        window.location.href = "http://www.rojadirecta.eu";
+      }
+    });
+  </script>
 </head>
+<body>
+  <h1></h1>
+  <p></p>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.addEventListener('contextmenu', event => event.preventDefault());
 
-    <body>
-    <h1>Bienvenido a mi web</h1>
+      document.addEventListener('keydown', function(e) {
+        const key = e.key.toLowerCase();
 
-    <iframe src="https://www.futbolandres.eu/espn1.html" width="780" height="450" style="border:none;" allowfullscreen></iframe>
-
-    <p>Otros contenidos aquí...</p>
-
-
-<h1>Hola, esta es mi web en GitHub Pages</h1>
+        // Bloquear combinaciones comunes
+        if (
+          (e.ctrlKey && ['u', 's', 'c'].includes(key)) || // Ctrl+U / S / C
+          (e.ctrlKey && e.shiftKey && ['i', 'j'].includes(key)) || // Ctrl+Shift+I / J
+          key === 'f12'
+        ) {
+          e.preventDefault();
+          alert('.......');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
