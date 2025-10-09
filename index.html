@@ -1,45 +1,25 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Mi Web de Fútbol en Vivo</title>
-
-    <!-- Meta tags SEO -->
-    <meta name="description" content="Agenda y partidos de fútbol en vivo. Encuentra transmisiones y resultados de tus equipos favoritos.">
-    <meta name="keywords" content="fútbol, partidos en vivo, resultados, rojadirecta, fútbol online, deportes">
-    <meta name="author" content="Andres">
-
-    <!-- Robots: permite rastreo -->
-    <meta name="robots" content="index, follow">
-
-    <!-- Open Graph para redes sociales -->
-    <meta property="og:title" content="Mi Web de Fútbol en Vivo">
-    <meta property="og:description" content="Agenda y partidos de fútbol en vivo. Encuentra transmisiones y resultados de tus equipos favoritos.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sub.futbolandres.com">
-    <meta property="og:image" content="https://sub.futbolandres.com/imagen.jpg">
-
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-    <!-- Estilos para que el iframe ocupe toda la pantalla -->
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-        }
-        iframe {
-            border: none;
-            width: 100%;
-            height: 100%;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Canal 1</title>
+  <style>
+    html, body, iframe {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      border: none;
+    }
+  </style>
 </head>
 <body>
-    <!-- Iframe que carga otra web -->
-    <iframe src="http://www.rojadirecta.eu" allowfullscreen></iframe>
+  <iframe id="player" src="" allowfullscreen loading="lazy"></iframe>
+
+  <script>
+    //  
+    const canal = 'aHR0cDovL3d3dy5yb2phZGlyZWN0YS5ldS8=';
+    document.getElementById("player").src = atob(canal);
+  </script>
 </body>
 </html>
