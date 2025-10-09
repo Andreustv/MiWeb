@@ -10,42 +10,36 @@
     <meta name="description" content="Agenda y partidos de fútbol en vivo. Encuentra transmisiones y resultados de tus equipos favoritos.">
     <meta name="keywords" content="fútbol, partidos en vivo, resultados, rojadirecta, fútbol online, deportes">
     <meta name="author" content="Andres">
-    
+
     <!-- Robots: permite rastreo -->
     <meta name="robots" content="index, follow">
 
-    <!-- Opcional: Open Graph para redes sociales -->
+    <!-- Open Graph para redes sociales -->
     <meta property="og:title" content="Mi Web de Fútbol en Vivo">
     <meta property="og:description" content="Agenda y partidos de fútbol en vivo. Encuentra transmisiones y resultados de tus equipos favoritos.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sub.futbolandres.com">
     <meta property="og:image" content="https://sub.futbolandres.com/imagen.jpg">
 
-    <!-- FavIcon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Estilos para que el iframe ocupe toda la pantalla -->
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        iframe {
+            border: none;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Bienvenido a Mi Web de Fútbol en Vivo</h1>
-        <p>Agenda de partidos y transmisiones online.</p>
-    </header>
-
-    <main>
-        <!-- Aquí puedes poner un iframe si quieres mostrar contenido externo -->
-        <div style="width:780px; height:450px; margin:20px auto;">
-            <iframe src="https://example.com" width="780" height="450" style="border:none;" allowfullscreen></iframe>
-        </div>
-
-        <!-- Contenido adicional -->
-        <section>
-            <h2>Últimos partidos</h2>
-            <p>Actualiza esta sección con tus partidos o agenda.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2025 Andres. Todos los derechos reservados.</p>
-    </footer>
+    <!-- Iframe que carga otra web -->
+    <iframe src="http://www.rojadirecta.eu" allowfullscreen></iframe>
 </body>
 </html>
-
